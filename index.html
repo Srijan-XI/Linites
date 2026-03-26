@@ -5,8 +5,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Linite — Linux Software Installer</title>
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="author" content="Linite" />
+    <meta name="theme-color" content="#1a1f2e" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="application-name" content="Linite" />
     <meta name="description"
         content="Linite is the Linux equivalent of Ninite. Pick your apps, click Install, and Linite silently sets up your entire system using the right package manager for your distro." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Linite — Linux Software Installer" />
+    <meta property="og:description"
+        content="Install Linux apps in one click with smart distro detection and package manager fallback." />
+    <meta property="og:url" content="https://github.com/Srijan-XI/Linite" />
+    <meta property="og:site_name" content="Linite" />
+    <meta property="og:image" content="img/mainui.png" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Linite — Linux Software Installer" />
+    <meta property="twitter:description"
+        content="The Ninite for Linux. Pick apps and let Linite install everything with the right package manager." />
+    <meta property="twitter:image" content="img/mainui.png" />
+    <link rel="icon" href="img/mainui.png" />
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "Linite",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "Linux",
+            "description": "Linite is the Linux equivalent of Ninite. Pick your apps and install them in parallel with intelligent package manager fallback.",
+            "url": "https://github.com/Srijan-XI/Linite",
+            "softwareVersion": "2.1.0",
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+            }
+        }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -27,14 +62,21 @@
                 <span class="logo-icon">🐧</span>
                 <span class="logo-text">Linite</span>
             </a>
-            <ul class="nav-links">
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-controls="nav-menu"
+                aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="nav-menu">
                 <li><a href="#features">Features</a></li>
                 <li><a href="#profiles">Profiles</a></li>
                 <li><a href="#catalog">Catalog</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#install">Get Started</a></li>
             </ul>
-            <a href="https://github.com/Srijan-XI/Linite" target="_blank" class="nav-cta" id="nav-github-btn">
+            <a href="https://github.com/Srijan-XI/Linite" target="_blank" rel="noopener noreferrer" class="nav-cta"
+                id="nav-github-btn">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                     <path
                         d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
@@ -890,10 +932,11 @@ python main.py --cli update</code></pre>
                 <div class="footer-links">
                     <div class="footer-col">
                         <div class="footer-col-title">Project</div>
-                        <a href="https://github.com/Srijan-XI/Linite" target="_blank">GitHub</a>
-                        <a href="https://github.com/Srijan-XI/Linite/issues" target="_blank">Issues</a>
+                        <a href="https://github.com/Srijan-XI/Linite" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="https://github.com/Srijan-XI/Linite/issues" target="_blank"
+                            rel="noopener noreferrer">Issues</a>
                         <a href="https://github.com/Srijan-XI/Linite/blob/main/CONTRIBUTING.md"
-                            target="_blank">Contribute</a>
+                            target="_blank" rel="noopener noreferrer">Contribute</a>
                     </div>
                     <div class="footer-col">
                         <div class="footer-col-title">Docs</div>
@@ -903,7 +946,8 @@ python main.py --cli update</code></pre>
                     </div>
                     <div class="footer-col">
                         <div class="footer-col-title">Legal</div>
-                        <a href="https://github.com/Srijan-XI/Linite/blob/main/LICENSE" target="_blank">MIT License</a>
+                        <a href="https://github.com/Srijan-XI/Linite/blob/main/LICENSE" target="_blank"
+                            rel="noopener noreferrer">MIT License</a>
                     </div>
                 </div>
                 <div class="footer-bottom">

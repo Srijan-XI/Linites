@@ -77,6 +77,36 @@
     }, { passive: true });
 })();
 
+/* ─── MOBILE NAV TOGGLE ──────────────────────────────────────────────── */
+(function initMobileNav() {
+    const nav = document.getElementById('navbar');
+    const toggle = document.getElementById('nav-toggle');
+    const menu = document.getElementById('nav-menu');
+    if (!nav || !toggle || !menu) return;
+
+    function closeMenu() {
+        nav.classList.remove('nav-open');
+        toggle.setAttribute('aria-expanded', 'false');
+    }
+
+    toggle.addEventListener('click', () => {
+        const isOpen = nav.classList.toggle('nav-open');
+        toggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    menu.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') closeMenu();
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 900) closeMenu();
+    });
+})();
+
 /* ─── SCROLL ANIMATE (IntersectionObserver) ───────────────────────────── */
 (function initScrollAnimate() {
     const items = document.querySelectorAll('[data-animate]');

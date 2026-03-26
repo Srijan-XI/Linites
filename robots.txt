@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# If you move to a custom domain, update the sitemap URL below.
+Sitemap: https://srijan-xi.github.io/Linites/sitemap.xml
