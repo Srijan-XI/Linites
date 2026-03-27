@@ -459,7 +459,7 @@
         /* Gaming */
         { id: 'steam', cat: 'gaming', icon: '<img src="img/assets/steam.svg" class="mock-app-icon">', name: 'Steam', checked: true },
         { id: 'lutris', cat: 'gaming', icon: '<img src="img/assets/lutris/lutris-auto.svg" class="mock-app-icon">', name: 'Lutris', checked: false },
-        { id: 'discord', cat: 'gaming', icon: '<img src="img/assets/discord/discordjs-auto.svg" class="mock-app-icon">', name: 'Discord', checked: false },
+        { id: 'discord', cat: 'gaming', icon: '<img src="img/assets/discord/discord.svg" class="mock-app-icon">', name: 'Discord', checked: false },
         { id: 'bottles', cat: 'gaming', icon: '<img src="img/assets/bottles/bottles-auto.svg" class="mock-app-icon">', name: 'Bottles', checked: false },
         { id: 'heroic', cat: 'gaming', icon: '<img src="img/assets/heroic/heroic-auto.svg" class="mock-app-icon">', name: 'Heroic Launcher', checked: false },
         { id: 'mangohud', cat: 'gaming', icon: '<img src="img/assets/mangohud/mangohud-auto.svg" class="mock-app-icon">', name: 'MangoHud', checked: false },
